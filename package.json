@@ -1,10 +1,10 @@
 {
-  "name": "app-example",
+  "name": "app-exampapp-keyboard-nodele",
   "version": "1.0.2",
   "description": "App repository as an example",
   "main": "src/index.js",
   "engines": {
-    "node": "10.15.3"
+    "node": "13.6.0"
   },
   "scripts": {
     "start": "node src/index.js",

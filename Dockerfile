@@ -1,4 +1,4 @@
-FROM node:13.6.0-alpine
+FROM node:13.6.0
 
 
 # Create app directory inside the container
@@ -14,4 +14,4 @@ RUN npm i --engine-strict=true --progress=false --loglevel="error" \
 ENV NODE_ENV=production
 
 # Define the command to run your app using `CMD` which defines your runtime.
-CMD ["/app/src/index.js"]
+CMD ["node", "/app/src/index.js"]
