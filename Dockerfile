@@ -1,4 +1,5 @@
-FROM oaklabs/oak:5.0.9
+FROM node:13.6.0-alpine
+
 
 # Create app directory inside the container
 WORKDIR /app
