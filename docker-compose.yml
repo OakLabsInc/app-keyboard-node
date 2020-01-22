@@ -3,7 +3,7 @@ services:
   app-keyboard-node:
     build: .
     container_name: app-keyboard-node
-    image: oaklabs/app-keyboard-node:latest
+    image: oaklabs/app-keyboard-node:iohook
     network_mode: host
     privileged: true
     devices:

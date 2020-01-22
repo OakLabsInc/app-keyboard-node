@@ -25,10 +25,10 @@ RUN printf "deb http://httpredir.debian.org/debian stretch-backports main non-fr
     xvfb \
     xauth \
     libx11-dev \
-    libxtst-dev  \
-    libxt-dev  \
-    libx11-xcb-dev  \
-    libxkbcommon-dev  \
+    libxtst-dev \
+    libxt-dev \
+    libx11-xcb-dev \
+    libxkbcommon-dev \
     libxkbcommon-x11-dev
 
 
@@ -43,7 +43,6 @@ ENV NODE_ENV=production \
     DISPLAY=:0 \
     IGNORE_GPU_BLACKLIST=false \
     NODE_TLS_REJECT_UNAUTHORIZED=0 \
-    ELECTRON_DISABLE_SECURITY_WARNINGS=true \
     # nvidia card specific env vars
     PATH=/usr/local/nvidia/bin:$PATH \
     LD_LIBRARY_PATH=/usr/local/nvidia/lib:/usr/local/nvidia/lib64
