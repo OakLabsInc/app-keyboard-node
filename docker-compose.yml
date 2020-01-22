@@ -11,6 +11,7 @@ services:
       - /dev/bus/usb
       - /dev/snd
     volumes:
+      - $HOME/.Xauthority:root/.Xauthority:rw
       - /tmp/.X11-unix:/tmp/.X11-unix
       - /dev/shm:/dev/shm
       - /usr/share/fonts:/usr/share/fonts
