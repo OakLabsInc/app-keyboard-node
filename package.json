@@ -1,5 +1,5 @@
 {
-  "name": "app-exampapp-keyboard-nodele",
+  "name": "app-keyboard-node",
   "version": "1.0.2",
   "description": "App repository as an example",
   "main": "src/index.js",
@@ -13,6 +13,7 @@
     "test": "exit 0;"
   },
   "dependencies": {
-    "keypress": "~0.2.1"
+    "x11": "^2.3.0",
+    "x11-keyboard": "^0.1.0"
   }
 }

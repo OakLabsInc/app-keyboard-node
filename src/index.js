@@ -1,15 +1,14 @@
-var keypress = require('keypress');
- 
-// make `process.stdin` begin emitting "keypress" events
-keypress(process.stdin);
- 
-// listen for the "keypress" event
-process.stdin.on('keypress', function (ch, key) {
-  console.log('got "keypress"', key);
-  if (key && key.ctrl && key.name == 'c') {
-    process.stdin.pause();
-  }
+var keyboard = new require('./app.js');
+
+keyboard.on('key.down:a', function() {
+	console.log('A key pressed');
 });
- 
-process.stdin.setRawMode(true);
-process.stdin.resume();
+
+keyboard.on('key.up:a', function() {
+	console.log('A key released');
+});
+
+keyboard.on('key.up:ctrl+b', function() {
+	console.log('Ctrl+B pressed');
+});
+keyboard.listen();
