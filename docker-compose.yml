@@ -1,15 +1,17 @@
 version: '3'
 services:
-  app-example:
+  app-keyboard-node:
     build: .
     container_name: app-keyboard-node
     image: oaklabs/app-keyboard-node:latest
     network_mode: host
+    privileged: true
     devices:
-      # this shares your graphics card explicitly
-      - /dev/dri:/dev/dri
+      - /dev/dri
+      - /dev/bus/usb
+      - /dev/snd
     volumes:
-      # we need to give `oak` a X11 socket to display the app on
       - /tmp/.X11-unix:/tmp/.X11-unix
-      # we also want to mount shared memory for our app
       - /dev/shm:/dev/shm
+      - /usr/share/fonts:/usr/share/fonts
+      - /run/udev:/run/udev
