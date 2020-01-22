@@ -18,7 +18,8 @@ RUN printf "deb http://httpredir.debian.org/debian stretch-backports main non-fr
 
 # We add an environmental variable that the app looks for to start the app with default url
 ENV NODE_ENV=production \
-    DISPLAY=:0 
+    DISPLAY=unix:0.0 \
+    DEBIAN_FRONTEND=noninteractive
 
 
 # Define the command to run your app using `CMD` which defines your runtime.

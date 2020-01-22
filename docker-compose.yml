@@ -3,16 +3,17 @@ services:
   app-keyboard-node:
     build: .
     container_name: app-keyboard-node
-    image: oaklabs/app-keyboard-node:release-1.0.0-iohook
+    image: oaklabs/app-keyboard-node:latest
     network_mode: host
-    privileged: true
+    stdin_open: true
+    tty: true
     devices:
       - /dev/dri
-      - /dev/bus/usb
-      - /dev/snd
     volumes:
-      - $HOME/.Xauthority:root/.Xauthority:rw
-      - /tmp/.X11-unix:/tmp/.X11-unix
+      - "$HOME/.Xauthority:/root/.Xauthority:rw"
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
       - /dev/shm:/dev/shm
-      - /usr/share/fonts:/usr/share/fonts
-      - /run/udev:/run/udev
+      - /dev/input:/dev/input
+    environment:
+      - NODE_ENV=production
+      - DISPLAY=unix:0.0
