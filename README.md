@@ -1,4 +1,4 @@
-# keyboard-node
+# app-keyboard-node
 
 An example app that is descibed in more detail at <https://docs.zivelo.com/docs/writing-a-simple-application>
 
@@ -12,7 +12,7 @@ nvm install $(cat .nvmrc)
 npm run rebuild
 ```
 
-### Now you can run electron locally
+### Now you can run locally
 
 ``` bash
 npm run dev
@@ -39,7 +39,7 @@ docker-compose down
     {
       "image": "index.docker.io/oaklabs/app-keyboard-node:latest",
       "environment": {
-        "TZ": "America/Phoenix",
+        "NODE_ENV": "development",
         "INPUT_DEVICE": "/dev/input/event6"
       }
     }
