@@ -1,15 +1,11 @@
-var keypress = require('keypress');
- 
-// make `process.stdin` begin emitting "keypress" events
-keypress(process.stdin);
- 
-// listen for the "keypress" event
-process.stdin.on('keypress', function (ch, key) {
-  console.log('got "keypress"', key);
-  if (key && key.ctrl && key.name == 'c') {
-    process.stdin.pause();
-  }
-});
- 
-process.stdin.setRawMode(true);
-process.stdin.resume();
+const InputEvent = require('input-event');
+
+const inputDevice = process.env.INPUT_DEVICE || 'event6'
+
+const input = new InputEvent(`/dev/input/${inputDevice}`);
+
+const keyboard = new InputEvent.Keyboard(input);
+
+keyboard.on('keyup'   , console.log);
+keyboard.on('keydown' , console.log);
+keyboard.on('keypress', console.log);

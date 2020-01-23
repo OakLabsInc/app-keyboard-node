@@ -13,6 +13,7 @@
     "test": "exit 0;"
   },
   "dependencies": {
+    "input-event": "^1.2.6",
     "keypress": "~0.2.1"
   }
 }
