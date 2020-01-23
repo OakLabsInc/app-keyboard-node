@@ -39,7 +39,8 @@ docker-compose down
     {
       "image": "index.docker.io/oaklabs/app-keyboard-node:latest",
       "environment": {
-        "TZ": "America/Phoenix"
+        "TZ": "America/Phoenix",
+        "INPUT_DEVICE": "/dev/input/event6"
       }
     }
   ]
