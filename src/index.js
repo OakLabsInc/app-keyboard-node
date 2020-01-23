@@ -1,6 +1,8 @@
 const InputEvent = require('input-event');
 
-const input = new InputEvent('/dev/input/event0');
+const inputDevice = process.env.INPUT_DEVICE || 'event6'
+
+const input = new InputEvent(`/dev/input/${inputDevice}`);
 
 const keyboard = new InputEvent.Keyboard(input);
 
