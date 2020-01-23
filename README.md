@@ -1,6 +1,6 @@
 # app-keyboard-node
 
-An example app that is descibed in more detail at <https://docs.zivelo.com/docs/writing-a-simple-application>
+An example app that can be used to log keyboard events to an OakOS unit
 
 ## Running locally
 
