@@ -12,7 +12,7 @@ nvm install $(cat .nvmrc)
 npm run rebuild
 ```
 
-### Now you can run electron locally
+### Now you can run locally
 
 ``` bash
 npm run dev

@@ -1,3 +1,4 @@
+
 'use strict';
 const ioHook = require('iohook');
 
@@ -11,3 +12,4 @@ ioHook.on("keydown", event => {
 });
 //Register and stark hook 
 ioHook.start();
+
