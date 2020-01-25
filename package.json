@@ -1,12 +1,10 @@
 {
-
   "name": "app-keyboard-node",
   "version": "1.0.0",
-
   "description": "App repository as an example",
   "main": "index.js",
   "engines": {
-    "node": "13.6.0"
+    "node": "10.15.3"
   },
   "scripts": {
     "start": "node index.js",
