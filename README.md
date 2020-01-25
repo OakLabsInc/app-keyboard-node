@@ -39,11 +39,12 @@ docker-compose down
     {
       "image": "index.docker.io/oaklabs/app-keyboard-node:latest",
       "environment": {
-        "NODE_ENV": "development",
-        "INPUT_DEVICE": "/dev/input/event6"
+        "TZ": "America/Los_Angeles"
       }
     }
   ]
 }
 
 ```
+
+This snippet results can be seen in the application logs on the OakOS Dashboard
