@@ -37,7 +37,7 @@ docker-compose down
 {
   "services": [
     {
-      "image": "index.docker.io/oaklabs/app-keyboard-node:latest",
+      "image": "index.docker.io/oaklabs/app-keyboard-node:input-event-latest",
       "environment": {
         "TZ": "America/Phoenix",
         "INPUT_DEVICE": "/dev/input/event6"
