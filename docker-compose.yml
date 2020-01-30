@@ -9,7 +9,7 @@ services:
     tty: true
     devices:
       - /dev/dri
-      - /dev/input/event14
+      - /dev/ttyACM0
     volumes:
       - "$HOME/.Xauthority:/root/.Xauthority:rw"
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
